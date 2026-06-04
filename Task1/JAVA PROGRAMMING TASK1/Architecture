@@ -1,0 +1,137 @@
+# Architecture – Online Reservation System
+
+## Architecture Style
+
+Object-Oriented Layered Architecture
+
+The application is divided into separate layers to improve code readability, maintainability, modularity, and future scalability.
+
+Layers:
+Presentation Layer
+↓
+Business Logic Layer
+↓
+Data Layer
+
+---
+
+## Layer 1 – Presentation Layer (User Interaction)
+
+Purpose:
+Responsible for displaying screens and collecting user input.
+
+Responsibilities:
+
+* Display Login Screen
+* Display Reservation Form
+* Display Cancellation Form
+* Show confirmation and error messages
+
+Files:
+LoginFrame.java
+ReservationFrame.java
+CancellationFrame.java
+
+Input:
+User Actions
+
+Output:
+Validated requests sent to business layer
+
+---
+
+## Layer 2 – Business Logic Layer (Application Processing)
+
+Purpose:
+Handle reservation rules and system workflow.
+
+Responsibilities:
+
+* Validate Login
+* Generate PNR
+* Validate Reservation Inputs
+* Process Reservation
+* Process Cancellation
+* Generate Reservation Summary
+
+Files:
+LoginService.java
+ReservationService.java
+CancellationService.java
+TrainService.java
+
+Input:
+User Requests
+
+Output:
+Processed Reservation Results
+
+---
+
+## Layer 3 – Data Layer (Storage)
+
+Purpose:
+Store and retrieve reservation information.
+
+Responsibilities:
+
+* Store Reservations
+* Retrieve Reservation Records
+* Update Cancellation Status
+* Maintain Reservation Data
+
+Files:
+ReservationStore.java
+reservations.txt
+
+Input:
+Processed Data
+
+Output:
+Stored Records
+
+---
+
+## Core Project Class
+
+Reservation.java
+
+Purpose:
+Represents a single reservation object.
+
+Attributes:
+
+* Passenger Name
+* Train Number
+* Train Name
+* Class Type
+* Date of Journey
+* Source
+* Destination
+* PNR
+* Reservation Status
+
+Methods:
+
+* generatePNR()
+* displayReservation()
+* cancelReservation()
+
+---
+
+## Project Workflow
+
+Login
+↓
+Dashboard
+↓
+Reservation / Cancellation
+↓
+Business Processing
+↓
+Store Data
+↓
+Display Result
+
+
+

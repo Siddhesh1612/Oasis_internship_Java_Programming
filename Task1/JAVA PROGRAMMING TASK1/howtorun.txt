@@ -1,0 +1,3 @@
+cd "c:\Professional docs\Oasis Infobyte Internship\Oasis_JavaProgramming_Internship\JAVA PROGRAMMING TASK1\src"
+javac Main.java ui\*.java service\*.java data\*.java model\*.java
+java Main
